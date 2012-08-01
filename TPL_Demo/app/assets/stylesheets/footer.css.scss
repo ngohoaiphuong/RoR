@@ -1,0 +1,43 @@
+/*
+Document   : footer.css
+Created on : Aug 1, 2012, 9:06:53 PM
+Author     : hoaiphuongngo
+Description:
+Purpose of the stylesheet follows.
+*/
+
+/*
+TODO customize this sample style
+Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
+*/
+
+@import "common";
+
+/* footer */
+
+footer {
+    margin-top: 45px;
+    padding-top: 5px;
+    border-top: 1px solid $grayMediumLight;
+    color: $lightGray;
+    a {
+        color: $gray;
+        &:hover { 
+            color: $grayDarker;
+            text-decoration: none;
+        }
+    }  
+
+    small {
+        float: left;
+    }
+
+    ul {
+        float: right;
+        list-style: none;
+        li {
+            float: left;
+            margin-left: 10px;
+        }
+    }
+}

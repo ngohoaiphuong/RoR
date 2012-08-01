@@ -1,0 +1,32 @@
+/*
+Document   : header.css
+Created on : Aug 1, 2012, 9:07:03 PM
+Author     : hoaiphuongngo
+Description:
+Purpose of the stylesheet follows.
+*/
+
+/*
+TODO customize this sample style
+Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
+*/
+
+@import "common";
+
+/* header */
+
+#logo {
+    float: left;
+    margin-right: 10px;
+    font-size: 1.7em;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    padding-top: 9px;
+    font-weight: bold;
+    line-height: 1;
+    &:hover {
+        color: #fff;
+        text-decoration: none;
+    }
+}
