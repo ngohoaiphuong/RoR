@@ -1,0 +1,82 @@
+/*
+Document   : form.css
+Created on : Aug 2, 2012, 1:01:25 PM
+Author     : vnicon
+Description:
+Purpose of the stylesheet follows.
+*/
+
+/*
+TODO customize this sample style
+Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
+*/
+
+@import "common";
+
+/* forms */
+/*
+input, textarea, select, .uneditable-input {
+border: 1px solid $grayMediumLight;
+width: 100%;
+padding: 40px;
+height: auto;
+margin-bottom: 25px;
+@include box_sizing;
+}
+*/
+#error_explanation {
+    color: #f00;
+    ul {
+        list-style: none;
+        margin: 0 0 18px 0;
+    }
+}
+
+.field_with_errors {
+    @extend .control-group;
+    @extend .error;
+}
+
+.spanLogin{
+    width: 250px;
+}
+
+.special_input{
+    margin-left: 15px;
+    margin-top: 10px;
+}
+
+.check-box{
+    margin-left: 15px;
+}
+
+.label-login{
+    margin-left: 20px;
+    margin-top: -18px;
+}
+
+.remember-div{
+    margin-left: 15px;
+    margin-top: 10px;
+}
+
+#login-btn{
+    margin-left: 150px;
+    margin-top: -43px;
+}
+
+.account-div{
+    background-color: $lightGray;
+    border-style:solid;
+    border-width:1px;
+}
+
+#account-label{
+    text-align: center;
+    font-size: 1.1em;
+    color: $white;
+    &:hover {
+        color: $white;
+        text-decoration: none;
+    }
+}

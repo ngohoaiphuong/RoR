@@ -20,7 +20,7 @@ module ApplicationHelper
     when 'signin'
       link = '#'
     end
-    '#{link}'
+    "#{link}"
   end
   
   def defaultTitle

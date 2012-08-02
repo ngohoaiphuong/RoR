@@ -10,14 +10,24 @@
             </a>
             <ul class="dropdown-menu">
               <li>
-                <%= link_to "Profile", "#" %>
-              </li>
-              <li>
-                <%= link_to "Settings", "#" %>
-              </li>
-              <li class="divider"></li>
-              <li>
-                <%= link_to "Sign out", "#", :method => "delete" %>
+                <div class="row">
+                  <div class="spanLogin">
+                    <%= form_tag do %>
+                      <%= text_field_tag(:user_signin, nil, 
+                        :placeholder => 'Email', :class => 'special_input') %>
+                      <%= text_field_tag(:user_password, nil, 
+                        :placeholder => 'Password', :class => 'special_input') %>
+                      <div class="remember-div">
+                        <%= check_box_tag(:remember, 'yes', false, :class => "check-box") %>
+                        <%= label_tag(:remember, "Remember me", :class => "label-login") %>
+                        <%= submit_tag("Sign In", :id => "login-btn", :class => "btn btn-large btn-primary") %>
+                      </div>
+                      <div class="account-div">
+                        <%= link_to "Create an account", get_link('contact'), :id => "account-label" %>
+                      </div>
+                    <% end %>
+                  </div>
+                </div>
               </li>
             </ul>
           </li>

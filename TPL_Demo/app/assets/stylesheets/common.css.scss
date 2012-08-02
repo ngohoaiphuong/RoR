@@ -16,3 +16,9 @@ $grayMediumLight: #eaeaea;
 $grayDarker: #222;
 $gray: #555;
 $white: #fff;
+
+@mixin box_sizing {
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+    box-sizing: border-box;
+}
