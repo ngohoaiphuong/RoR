@@ -1,4 +1,8 @@
 TPLDemo::Application.routes.draw do
+  get "pages/about"
+
+  get "pages/contact"
+
   get "home/index"
 
   # The priority is based upon order of creation:

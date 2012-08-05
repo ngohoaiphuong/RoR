@@ -1,0 +1,23 @@
+<%= content_tag(:div, :class => "row") do %>
+  <%= content_tag(:div, :class => "spanLogin") do %>
+    <%= form_tag do %>
+      <%= text_field_tag(:user_signin, nil, 
+        :placeholder => 'Email', :class => 'special_input') %>
+      <%= text_field_tag(:user_password, nil, 
+        :placeholder => 'Password', :class => 'special_input') %>
+      <%= content_tag(:div, :class => "remember-div") do %>
+        <%= label_tag(:remember, nil, :class => "checkbox") do %>
+          <%= check_box_tag(:remember, 'yes', false, 
+            :class => "check-box") %>
+          Remember me
+        <% end %>
+        <%= submit_tag("Sign In", :id => "login-btn", 
+          :class => "btn btn-large btn-primary") %>
+      <% end %>
+      <%= content_tag(:div, :class => "account-div") do %>
+        <%= link_to "Create an account", get_link('contact'), 
+          :id => "account-label" %>
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>

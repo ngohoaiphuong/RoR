@@ -1,6 +1,6 @@
 module ApplicationHelper
   def full_title(title)
-    base_title = defaultTitle
+    base_title = default_title
     if(title.empty?)
       base_title
     else
@@ -12,18 +12,20 @@ module ApplicationHelper
     link = '#'
     case page
     when 'home'
-      link = '#'
+      link = root_path
     when 'about'
-      link = '#'
+      link = pages_about_path
     when 'contact'
-      link = '#'
+      link = pages_contact_path
     when 'signin'
       link = '#'
     end
+    
     "#{link}"
   end
   
-  def defaultTitle
+  def default_title
     'TPL Demo'
   end
+  
 end

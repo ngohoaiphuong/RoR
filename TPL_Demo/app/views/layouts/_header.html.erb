@@ -1,38 +1,25 @@
-<header class="navbar navbar-fixed-top">
-  <div class="navbar-inner">
-    <div class="container">
-      <%= link_to "TPL Demo", '#', :id => "logo" %>
-      <nav>
-        <ul class="nav pull-right">
-          <li id="fat-menu" class="dropdown">
+<%= content_tag(:header, :class => "navbar navbar-fixed-top") do %>
+  <%= content_tag(:div, :class => "navbar-inner") do %>
+    <%= content_tag(:div, :class => "container") do %>
+      <%= link_to "TPL Library", get_link("home"), :id => "logo" %>
+      <%= content_tag(:nav) do %>
+        <%= content_tag(:ul, :class => "nav pull-right") do %>
+          <%= content_tag(:li, :id => "fat-menu", :class => "dropdown") do %>
+            <% icon_user = content_tag(:i, nil, :class => "icon-user") %>
+            <% caret = content_tag(:b, nil, :class => "caret") %>
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              Sign In <b class="caret"></b>
+              <%= icon_user %>
+              Sign In 
+              <%= caret %>
             </a>
-            <ul class="dropdown-menu">
-              <li>
-                <div class="row">
-                  <div class="spanLogin">
-                    <%= form_tag do %>
-                      <%= text_field_tag(:user_signin, nil, 
-                        :placeholder => 'Email', :class => 'special_input') %>
-                      <%= text_field_tag(:user_password, nil, 
-                        :placeholder => 'Password', :class => 'special_input') %>
-                      <div class="remember-div">
-                        <%= check_box_tag(:remember, 'yes', false, :class => "check-box") %>
-                        <%= label_tag(:remember, "Remember me", :class => "label-login") %>
-                        <%= submit_tag("Sign In", :id => "login-btn", :class => "btn btn-large btn-primary") %>
-                      </div>
-                      <div class="account-div">
-                        <%= link_to "Create an account", get_link('contact'), :id => "account-label" %>
-                      </div>
-                    <% end %>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </div>
-</header>
+            <%= content_tag(:ul, :class => "dropdown-menu") do %>
+              <%= content_tag(:li) do %>
+                <%= render "layouts/login" %>
+              <% end %>
+            <% end %>
+          <% end %>
+        <% end %>
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>

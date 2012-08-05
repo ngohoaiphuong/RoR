@@ -1,0 +1,77 @@
+/*
+Document   : about.css
+Created on : Aug 4, 2012, 8:56:59 PM
+Author     : hoaiphuongngo
+Description:
+Purpose of the stylesheet follows.
+*/
+
+/*
+TODO customize this sample style
+Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
+*/
+
+@import "common";
+
+#content {
+    background: url(../assets/bg-headliner.gif) repeat top center;
+    height: auto;
+    width: 100%;
+    div {
+        div img, &#featured img {
+            border: 3px solid $white; 
+        }
+        
+        margin: 0 auto;
+        padding: 0 0 40px;
+        width: 950px;
+        div, &.section div.figure {
+            background: url(../assets/bg-image-higlight.jpg) no-repeat;
+            float: right;
+            margin-left: 45px;
+            padding: 35px 0 0;
+            position: relative;
+            width: 614px; 
+        }
+        p {
+            line-height: 21px;
+            margin: 0;
+            padding-bottom: 25px;
+            text-align: left;
+            text-shadow: 1px 1px 0 #F4DCB6; 
+            a {
+                color: #80662B;
+                font-style: italic;
+            }
+        }
+        b {
+            color: #816221;
+            text-shadow: 1px 1px 0 #F4DCB6;
+            &.first {
+                display: block;
+                padding-top: 33px; 
+            } 
+        }
+        h2 {
+            color: #73541B;
+            font-family: 'CarterOneRegular';
+            font-size: 25px;
+            margin: 0;
+            padding: 25px 0 10px;
+            text-shadow: 1px 1px 0 #c8b57d; 
+        }
+        h3 {
+            color: #73541B;
+            font-family: 'CarterOneRegular';
+            font-size: 23px;
+            margin: 0;
+            padding: 25px 0 10px;
+            text-shadow: 1px 1px 0 #c8b57d; 
+        }
+        h2 span {
+            font-size: 20px;
+            font-weight: normal; 
+        }
+        
+    } 
+}

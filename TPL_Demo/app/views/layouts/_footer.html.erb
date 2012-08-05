@@ -1,11 +1,9 @@
-<footer class="footer">
-  <small>
-    Copyright @ 2012 by <a href="http://www.techpropulsionlabs.com">Tech Propulsion Labs</a>
-  </small>
-  <nav>
-    <ul>
-      <li><%= link_to "About",   get_link('about') %></li>
-      <li><%= link_to "Contact", get_link('contact') %></li>
-    </ul>
-  </nav>
-</footer>
+<%= content_tag(:footer, :class => "footer") do %>
+  <%= content_tag(:small, nil) do %>
+    Copyright @ 2012 by 
+    <%= link_to("Tech Propulsion Labs", "http://www.techpropulsionlabs.com") %>
+  <% end %>
+  <%= content_tag(:nav, nil) do %>
+    <%= build_menu_footer(yield(:title)) %>
+  <% end %>
+<% end %>
