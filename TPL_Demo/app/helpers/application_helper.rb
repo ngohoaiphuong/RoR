@@ -25,7 +25,7 @@ module ApplicationHelper
   end
   
   def default_title
-    'TPL Demo'
+    'TPL Library'
   end
   
 end
